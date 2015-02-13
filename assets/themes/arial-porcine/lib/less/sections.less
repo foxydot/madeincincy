@@ -1,0 +1,40 @@
+.page-template-page-sectioned{
+  .site-inner,.content-sidebar-wrap,main{
+    padding-left:0;
+    padding-right: 0;
+  }
+  .section{
+    .section-title{
+      text-align: center;
+      h3{
+        color: @dkgrey;
+        text-align: center;
+        text-transform: uppercase;
+        .customheader(3.2);
+        font-weight: 300;
+        padding: 0;
+        margin-bottom:25px;
+        border-color: @dkgrey;
+        border-width: 2px 0;
+        border-style: solid;
+        display: inline-block;
+      }
+    }
+    .section-body{
+      .clearfix;
+      padding: 0;
+      img.pull-left{
+        margin-right: 2rem;
+      }
+      img.pull-right{
+        margin-left: 2rem;
+      }
+      .section-subtitle{
+        .customheader(2.2);
+        font-weight: 300;
+        color: @dkgrey;
+        line-height: 1.25;
+      }
+    }
+  }
+}
