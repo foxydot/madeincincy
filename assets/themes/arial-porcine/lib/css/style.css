@@ -5861,7 +5861,7 @@ Structure and Layout
 .sidebar-secondary section,
 article {
   margin: 0 auto;
-  max-width: 1140px;
+  max-width: 850px;
 }
 .site-inner {
   clear: both;
@@ -6312,54 +6312,11 @@ div.gform_wrapper .gform_footer input[type="submit"] {
 img#wpstats {
   display: none;
 }
-/* Pre Header */
-.pre-header {
-  background: #d6b293;
-}
-.pre-header .wrap {
-  text-align: right;
-}
-.pre-header .wrap .header-widget-area {
-  text-align: right;
-  line-height: 0;
-}
-.pre-header .wrap .header-widget-area .widget {
-  width: auto;
-  display: inline-block;
-}
-.pre-header .wrap .connected-phone,
-.pre-header .wrap .connected-social {
-  display: inline-block;
-  float: none;
-  vertical-align: baseline;
-  top: 0;
-}
-.pre-header .wrap .connected-phone .social-media a.fa,
-.pre-header .wrap .connected-social .social-media a.fa {
-  width: 2em;
-  height: 2em;
-  text-align: center;
-  line-height: 2em;
-}
-.pre-header .wrap .connected-phone .social-media span,
-.pre-header .wrap .connected-social .social-media span {
-  text-indent: -9999px;
-  display: none;
-}
-.pre-header .wrap .connected-phone {
-  color: white;
-  padding-right: 1rem;
-  position: relative;
-  top: -0.8rem;
-}
-.pre-header .wrap .connected-phone span {
-  font-weight: 700;
-}
 /*
 Site Header
 ---------------------------------------------------------------------------------------------------- */
 .site-header {
-  background-color: #f7f7f7;
+  min-height: 850px;
 }
 .site-header .wrap {
   padding: 40px 0;
@@ -6381,6 +6338,10 @@ Site Header
 }
 .header-image .title-area {
   padding: 0;
+  float: none;
+  position: relative;
+  left: 50%;
+  width: 0;
 }
 .site-title {
   font-size: 28px;
@@ -6403,8 +6364,11 @@ Site Header
   margin-bottom: 0;
 }
 /* Full width header, no widgets */
-.header-full-width .title-area,
 .header-full-width .site-title {
+  position: relative;
+  width: auto;
+  left: -425px;
+  top: 200px;
   /*width: 100%;*/
 }
 .header-image .site-description,
@@ -6417,12 +6381,11 @@ Site Header
   padding: 0;
 }
 .header-image .site-title a {
-  float: left;
-  min-height: 46px;
-  width: 214px;
-  height: 46px;
-  background: url(../img/logo.png) no-repeat center left;
+  width: 850px;
+  height: 400px;
+  background: url(../img/logo.svg) no-repeat center left rgba(255, 255, 255, 0.6);
   background-size: contain;
+  padding: 10px;
   margin: 15px 0 0;
   margin: 1.5rem 0 0;
 }

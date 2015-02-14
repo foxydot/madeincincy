@@ -55,13 +55,14 @@ class MSDSectionedPage{
             $pull = $i%2==1?'left':'right';
             $title = apply_filters('the_title',$sectioned_page_metabox->get_the_value('title'));
             $wrapped_title = trim($title) != ''?'<div class="section-title">
-        <h3 class="wrap">
+        <h3 class="wrap animated wow fadeInDown">
             '.$title.'
         </h3>
     </div>':'';
             $slug = sanitize_title_with_dashes(str_replace('/', '-', $sectioned_page_metabox->get_the_value('title')));
             $subtitle = $sectioned_page_metabox->get_the_value('subtitle') !=''?'<h4 class="section-subtitle">'.apply_filters('the_content',$sectioned_page_metabox->get_the_value('subtitle')).'</h4>':'';
-            $content = apply_filters('the_content',$sectioned_page_metabox->get_the_value('content'));
+            $meta = $sectioned_page_metabox->the_meta();
+            $content = apply_filters('the_content',$meta['sections'][$sectioned_page_metabox->get_the_index()]['content']);
             $image = $sectioned_page_metabox->get_the_value('image') !=''?'<img src="'.$sectioned_page_metabox->get_the_value('image').'" class="pull-'.$pull.'">':'';
             $nav_ids[] = $slug;
             $nav[] = '';
@@ -69,9 +70,10 @@ class MSDSectionedPage{
             $floating_nav[] = '<a id="'.$slug.'_fl_nav" href="#'.$slug.'"><i class="fa-3x adex-'.$slug.'"></i>'.str_replace(' ', '<br>', $title).'</a>';
             $sections[] = '
 <div id="'.$slug.'" class="section section-'.$eo.' section-'.$slug.' clearfix">
-    '.$wrapped_title.'
+    
     <div class="section-body">
         <div class="wrap">
+            '.$wrapped_title.'
             '.$image.'
             '.$subtitle.'
             '.$content.'
