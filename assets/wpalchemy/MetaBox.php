@@ -1726,7 +1726,8 @@ class WPAlchemy_MetaBox
 				// http://phpdoc.wordpress.org/trunk/WordPress/Embed/WP_Embed.html#run_shortcode
 
 				global $wp_embed;
-				return do_shortcode($wp_embed->run_shortcode($value));
+				//return do_shortcode($wp_embed->run_shortcode($value));
+				return apply_filters('the_content',$value);
 			}
 		}
 		else

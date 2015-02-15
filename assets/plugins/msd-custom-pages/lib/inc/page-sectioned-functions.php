@@ -60,9 +60,9 @@ class MSDSectionedPage{
         </h3>
     </div>':'';
             $slug = sanitize_title_with_dashes(str_replace('/', '-', $sectioned_page_metabox->get_the_value('title')));
-            $subtitle = $sectioned_page_metabox->get_the_value('subtitle') !=''?'<h4 class="section-subtitle">'.apply_filters('the_content',$sectioned_page_metabox->get_the_value('subtitle')).'</h4>':'';
+            $subtitle = $sectioned_page_metabox->get_the_value('subtitle') !=''?'<h4 class="section-subtitle">'.$sectioned_page_metabox->get_the_value('subtitle').'</h4>':'';
             $meta = $sectioned_page_metabox->the_meta();
-            $content = apply_filters('the_content',$meta['sections'][$sectioned_page_metabox->get_the_index()]['content']);
+            $content = $sectioned_page_metabox->get_the_value('content');
             $image = $sectioned_page_metabox->get_the_value('image') !=''?'<img src="'.$sectioned_page_metabox->get_the_value('image').'" class="pull-'.$pull.'">':'';
             $nav_ids[] = $slug;
             $nav[] = '';
