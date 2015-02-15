@@ -78,6 +78,19 @@ body {
   max-width: 500px;
   margin: 0 auto;
 }
+.section-want-to-learn-more .wrap .gform_wrapper .gform_body li.gfield > label {
+  display: none;
+}
+.section-want-to-learn-more .wrap .gform_wrapper .gform_body li.gfield input[type="text"] {
+  background-image: url(../img/icons2.svg);
+  background-repeat: no-repeat;
+  background-position: 4px 4px;
+  background-size: 36px auto;
+  padding-left: 44px;
+}
+.section-want-to-learn-more .wrap .gform_wrapper .gform_body li.mic-card input[type="text"] {
+  background-position: 4px -38px;
+}
 .woocommerce ul.products {
   margin-top: 2rem;
 }
