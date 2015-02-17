@@ -106,6 +106,3 @@ body {
   display: table-cell;
   vertical-align: middle;
 }
-.woocommerce ul.products li.product:hover {
-  background-color: #999999;
-}

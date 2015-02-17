@@ -5,5 +5,5 @@ jQuery(document).ready(function($) {
     $('#homepage-widgets section.widget').addClass('col-sm-'+cols);
     $('#homepage-widgets section.widget').addClass('col-xs-12');
     
-    new WOW().init();
+    $('.woocommerce .products .product a').removeAttr('href'); //remove this to get links back
 });
